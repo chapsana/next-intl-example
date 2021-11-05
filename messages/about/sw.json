@@ -1,0 +1,7 @@
+{
+  "About": {
+    "title": "Kuhusu",
+    "description": "Ukurasa huu unatumia ujumbe kutoka <code>./messages/about/{locale}.json</code> na <code>./messages/shared/{locale}.json</code>. Ujumbe kutoka kwa ukurasa wa mwanzo na lugha zingine hazijapakiwa.",
+    "lastUpdated": "Mfano huu ulisasishwa {lastUpdatedRelative} ({lastUpdated, date, short})."
+  }
+}

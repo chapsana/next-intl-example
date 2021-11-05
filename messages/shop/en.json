@@ -1,0 +1,6 @@
+{
+  "Shop": {
+    "title": "Shop",
+    "lastUpdated": "This example was updated {lastUpdatedRelative} ({lastUpdated, date, short})."
+  }
+}

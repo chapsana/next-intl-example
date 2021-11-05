@@ -1,9 +1,11 @@
 {
   "Index": {
     "title": "Home",
+
     "description": "This page uses messages from <code>./messages/index/{locale}.json</code> and <code>./messages/shared/{locale}.json</code>. Messages from the about page and other locales are not loaded.",
 
     "static": "Hello",
+
     "interpolation": "Hello {name}",
 
     "plural": "You have {numMessages, plural, =0 {no messages} =1 {one message} other {# messages}}.",
@@ -16,15 +18,16 @@
 
     "attributeUrl": "https://example.com",
 
-
     "percent": "This product is on sale: {value, number, percent}",
+
     "percent2": "At most 2 fraction digits: {value, number, .##}",
+
     "price": "This product costs {price, number, currency}",
+
     "ordered": "You've ordered this product on {orderDate, date, short}",
-    "latitude": "Latitude: {latitude, number, precise}",  
 
-    "selectLang": "{gender, select, male {Swahili} female {She}} is online.",
-    "asd":"{taxableArea, select, yes {An additional be collected.} other {No taxes apply.}"  
+    "latitude": "Latitude: {latitude, number, precise}",
 
+    "content": "<h1>Headline<h1><p>This is raw HTML</p>"
   }
 }

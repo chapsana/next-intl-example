@@ -1,73 +1,86 @@
-import { parseISO } from "date-fns";
-import { GetStaticPropsContext } from "next";
-import { useTranslations, useIntl } from "next-intl";
-import { useRouter } from "next/router";
-import Code from "../components/Code";
-import PageLayout from "../components/PageLayout";
+import { parseISO } from 'date-fns'
+import { GetStaticPropsContext } from 'next'
+import { useTranslations, useIntl } from 'next-intl'
+import { useRouter } from 'next/router'
+import Code from '../components/Code'
+import PageLayout from '../components/PageLayout'
 
 export default function Index() {
-  const t = useTranslations("Index");
-  const intl = useIntl();
-  const dateTime = parseISO("2020-11-20T10:36:01.516Z");
-  // const dateTime = parseISO('2020-11-20T10:36:01.516Z');
-  const now = parseISO("2020-11-25T10:36:01.516Z");
+  const t = useTranslations('Index')
+  const intl = useIntl()
+  const dateTime = parseISO('2020-11-20T10:36:01.516Z')
+  const now = parseISO('2020-11-25T10:36:01.516Z')
 
-  const { locale } = useRouter();
+  const { locale } = useRouter()
 
   return (
-    <PageLayout title={t("title")}>
+    <PageLayout title={t('title')}>
       <>
-        {t("description", {
-          locale,
-          code: (children) => <Code>{children}</Code>,
-        })}
         <br />
+        {t('static')}
         <br />
-        {t("static")}
+        {t('interpolation', { name: 'Jane' })}
         <br />
-        {t("interpolation", { name: "Jane" })}
+        {t('plural', { numMessages: 3 })}
         <br />
-        {t("plural", { numMessages: 3 })}
+        {t('selectordinal', { year: 11 })}
         <br />
-        {t("selectordinal", { year: 11 })}
-        <br />
-        {t("selectLang", { gender: "male" })}
-        <br />
-        {t("asd", { taxableArea: "yes" })}
-        <br />
-        {intl.formatNumber(4999, { style: "currency", currency: "TZS" })}
+
+        {intl.formatNumber(4999, { style: 'currency', currency: 'TZS' })}
         <br />
         {intl.formatDateTime(dateTime, {
-          year: "numeric",
-          month: "numeric",
-          day: "numeric",
+          year: 'numeric',
+          month: 'numeric',
+          day: 'numeric',
         })}
 
         <br />
-        {intl.formatDateTime(dateTime, { hour: "numeric", minute: "numeric" })}
+        {intl.formatDateTime(dateTime, { hour: 'numeric', minute: 'numeric' })}
         <br />
         {intl.formatRelativeTime(dateTime, now)}
         <br />
-        {t("ordered", { orderDate: parseISO("2020-11-20T10:36:01.516Z") })}
+        {t('ordered', { orderDate: parseISO('2020-11-20T10:36:01.516Z') })}
         <br />
-        {t("latitude", { latitude: 47.414329182 })}
+        {t('latitude', { latitude: 47.414329182 })}
         <br />
         {t(
-          "price",
+          'price',
           { price: 32000.99 },
           {
             number: {
               currency: {
-                style: "currency",
-                currency: "EUR",
+                style: 'currency',
+                currency: 'USD',
               },
             },
           }
         )}
         <br />
+        <a href={t('attributeUrl')}>Link</a>
+        <br />
+        {t.rich('richText', {
+          important: (children) => <b>{children}</b>,
+          very: (children) => <i>{children}</i>,
+        })}
+
+        <br />
+        <br />
+        {t('percent', { value: 18 / 100 })}
+        <br />
+        {t('percent', { value: 60 / 100 })}
+        <br />
+        <br />
+        {t.rich('description', {
+          locale,
+          code: (children) => <Code>{children}</Code>,
+        })}
+        <br />
+        <div dangerouslySetInnerHTML={{ __html: t.raw('content') }} />
+        <br />
+        <br />
       </>
     </PageLayout>
-  );
+  )
 }
 
 export function getStaticProps({ locale }: GetStaticPropsContext) {
@@ -78,5 +91,5 @@ export function getStaticProps({ locale }: GetStaticPropsContext) {
         ...require(`../../messages/index/${locale}.json`),
       },
     },
-  };
+  }
 }

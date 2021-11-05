@@ -2,6 +2,7 @@
   "Navigation": {
     "index": "Home",
     "about": "About",
+    "shop": "Shop",
     "switchLocale": "Switch to {locale, select, de {German} en {English}}"
   }
 }
