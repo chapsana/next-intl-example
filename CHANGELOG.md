@@ -13,6 +13,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - Changes Germain to Swahili
 - Use Nextjs v12
+- Use custom eslint config(prev was molindo config)
 - Version bump only for dependencies
 
 ## [1.1.0](https://github.com/amannn/next-intl/compare/v1.3.2...v1.3.3) (2021-02-09)

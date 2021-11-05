@@ -1,13 +1,13 @@
-import {ReactNode} from 'react';
+import { ReactNode } from 'react'
 
 type Props = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
-export default function Code({children}: Props) {
+export default function Code({ children }: Props) {
   return (
-    <code style={{background: '#eee', padding: 4, borderRadius: 4}}>
+    <code style={{ background: '#eee', padding: 4, borderRadius: 4 }}>
       {children}
     </code>
-  );
+  )
 }

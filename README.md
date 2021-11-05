@@ -1,4 +1,4 @@
-# Nextjs Intl Example
+# Nextjs Intl Example | How to localize your app with Nextjs Intl
 
 Using `next-intl` v2
 
@@ -32,3 +32,11 @@ See [change log](./CHANGELOG.md) for more details.
   - https://github.com/amannn/next-intl/blob/main/docs/usage.md#numbers-within-messages
   - https://unicode-org.github.io/icu/userguide/format_parse/numbers/skeletons.html#scale
 - _another_
+
+## Contributing
+
+PRs are welcome!
+
+## License
+
+This project is licensed under the MIT License.

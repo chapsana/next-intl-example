@@ -1,32 +1,32 @@
-import { parseISO } from "date-fns";
-import { GetStaticPropsContext } from "next";
-import { useIntl, useTranslations } from "next-intl";
-import { useRouter } from "next/router";
-import Code from "../components/Code";
-import PageLayout from "../components/PageLayout";
+import { parseISO } from 'date-fns'
+import { GetStaticPropsContext } from 'next'
+import { useIntl, useTranslations } from 'next-intl'
+import { useRouter } from 'next/router'
+import Code from '../components/Code'
+import PageLayout from '../components/PageLayout'
 
 export default function About() {
-  const t = useTranslations("About");
-  const { locale } = useRouter();
-  const intl = useIntl();
-  const lastUpdated = parseISO("2021-01-26T17:04:45.567Z");
+  const t = useTranslations('About')
+  const { locale } = useRouter()
+  const intl = useIntl()
+  const lastUpdated = parseISO('2021-01-26T17:04:45.567Z')
 
   return (
-    <PageLayout title={t("title")}>
+    <PageLayout title={t('title')}>
       <p>
-        {t.rich("description", {
+        {t.rich('description', {
           locale,
           code: (children) => <Code>{children}</Code>,
         })}
       </p>
       <p>
-        {t("lastUpdated", {
+        {t('lastUpdated', {
           lastUpdated,
           lastUpdatedRelative: intl.formatRelativeTime(lastUpdated),
         })}
       </p>
     </PageLayout>
-  );
+  )
 }
 
 export function getStaticProps({ locale }: GetStaticPropsContext) {
@@ -38,5 +38,5 @@ export function getStaticProps({ locale }: GetStaticPropsContext) {
       },
       now: new Date().getTime(),
     },
-  };
+  }
 }

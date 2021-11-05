@@ -14,7 +14,7 @@
 
     "selectordinal": "Ni mwaka wa {year, selectordinal, one {#wa kwanza} two {#wa pili} few {#wa tatu} other {mwingine}} wa paka wangu kuzaliwa!",
 
-    "richText": "Hii ni  <important><muhimu>muhimu</muhimu> muhimu</important>",
+    "richText": "Hii ni <important><very>very</very> important</important>",
 
     "attributeUrl": "https://example.com",
 
