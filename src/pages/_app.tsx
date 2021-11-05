@@ -1,7 +1,7 @@
-import {NextIntlProvider} from 'next-intl';
-import {AppProps} from 'next/app';
+import { NextIntlProvider } from "next-intl";
+import { AppProps } from "next/app";
 
-export default function App({Component, pageProps}: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <NextIntlProvider
       // To achieve consistent date, time and number formatting
@@ -9,11 +9,11 @@ export default function App({Component, pageProps}: AppProps) {
       formats={{
         dateTime: {
           short: {
-            day: 'numeric',
-            month: 'short',
-            year: 'numeric'
-          }
-        }
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          },
+        },
       }}
       // Messages can be received from individual pages or configured
       // globally in this module (`App.getInitialProps`). Note that in

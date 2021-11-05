@@ -9,7 +9,6 @@ export default function Index() {
   const t = useTranslations("Index");
   const intl = useIntl();
   const dateTime = parseISO("2020-11-20T10:36:01.516Z");
-  // const dateTime = parseISO('2020-11-20T10:36:01.516Z');
   const now = parseISO("2020-11-25T10:36:01.516Z");
 
   const { locale } = useRouter();
@@ -17,11 +16,6 @@ export default function Index() {
   return (
     <PageLayout title={t("title")}>
       <>
-        {t("description", {
-          locale,
-          code: (children) => <Code>{children}</Code>,
-        })}
-        <br />
         <br />
         {t("static")}
         <br />
@@ -31,10 +25,7 @@ export default function Index() {
         <br />
         {t("selectordinal", { year: 11 })}
         <br />
-        {t("selectLang", { gender: "male" })}
-        <br />
-        {t("asd", { taxableArea: "yes" })}
-        <br />
+
         {intl.formatNumber(4999, { style: "currency", currency: "TZS" })}
         <br />
         {intl.formatDateTime(dateTime, {
@@ -59,11 +50,33 @@ export default function Index() {
             number: {
               currency: {
                 style: "currency",
-                currency: "EUR",
+                currency: "USD",
               },
             },
           }
         )}
+        <br />
+        <a href={t("attributeUrl")}>Link</a>
+        <br />
+        {t.rich("richText", {
+          important: (children) => <b>{children}</b>,
+          very: (children) => <i>{children}</i>,
+        })}
+        
+        <br />
+        <br />
+        {t("percent", { value: 18/100 })}
+        <br />
+        {t("percent", { value: 60/100 })}
+        <br />
+        <br />
+        {t.rich("description", {
+          locale,
+          code: (children) => <Code>{children}</Code>,
+        })}
+        <br />
+        <div dangerouslySetInnerHTML={{__html: t.raw('content')}} />
+        <br />
         <br />
       </>
     </PageLayout>

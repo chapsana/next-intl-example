@@ -1,0 +1,8 @@
+{
+  "Navigation": {
+    "index": "Nyumbani",
+    "about": "Kuhusu",
+    "shop": "Duka",
+    "switchLocale": "Badilli kutoka {locale, select, sw {Kiswahili} en {English}} "
+  }
+}

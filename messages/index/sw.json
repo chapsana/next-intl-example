@@ -1,0 +1,33 @@
+{
+  "Index": {
+    "title": "Nyumani",
+
+    "description": "Ukurasa huu unatumia ujumbe kutoka <code>./messages/index/{locale}.json</code> and <code>./messages/shared/{locale}.json</code>. Ujumbe kutoka kwa ukurasa wa kuhusu na lugha zingine hazijapakiwa.",
+
+    "static": "Habari",
+
+    "interpolation": "Habari {name}",
+
+    "plural": "{numMessages, plural, =0 {Huna ujumbe} =1 {Una ujumbe mmoja} other {Una ujumbe #}}.",
+
+    "select": "{gender, select, male {Yuko} female {Yuko} other {Wako}} mtandaoni.",
+
+    "selectordinal": "Ni mwaka wa {year, selectordinal, one {#wa kwanza} two {#wa pili} few {#wa tatu} other {mwingine}} wa paka wangu kuzaliwa!",
+
+    "richText": "Hii ni  <important><muhimu>muhimu</muhimu> muhimu</important>",
+
+    "attributeUrl": "https://example.com",
+
+    "percent": "Bidhaa hii inauzwa: {value, number, percent}",
+
+    "percent2": "Angalau tarakimu 2 za sehemu: {value, number, .##}",
+
+    "price": "Bidhaa hii inagharimu {price, number, currency}",
+
+    "ordered": "Umeagiza bidhaa hii tarehe {orderDate, date, short}",
+
+    "latitude": "Latitudo: {latitude, number, precise}",
+
+    "content": "<h1>Kichea cha habari<h1><p>Hii ni HTML ghafi</p>"
+  }
+}
