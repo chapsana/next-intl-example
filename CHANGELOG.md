@@ -1,3 +1,10 @@
+### [1.0.1](https://github.com/chapsana/next-intl-example/compare/v1.0.0...v1.0.1) (2021-11-29)
+
+
+### Bug Fixes
+
+* package version ([9f65519](https://github.com/chapsana/next-intl-example/commit/9f65519d4a79de89665822e8f4c1ecee068cc102))
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
