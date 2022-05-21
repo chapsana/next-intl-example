@@ -22,9 +22,6 @@ You can run the example locally like this:
 - English
 - Swahili
 
-## Changes
-
-See [change log](./CHANGELOG.md) for more details.
 
 ## Other Notes
 
